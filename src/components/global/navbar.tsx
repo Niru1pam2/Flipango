@@ -26,7 +26,7 @@ const NavbarItem = ({ children, isActive, href }: NavbarItemProps) => {
       variant={"outline"}
       className={cn(
         "bg-transparent hover:bg-transparent rounded-full hover:border-primary border-transparent px-3.5 text-lg",
-        isActive && "bg-black text-white hover:bg-black hover:text-white "
+        isActive && "bg-black text-white hover:bg-black hover:text-white ",
       )}
     >
       <Link href={href}>{children}</Link>
@@ -64,7 +64,7 @@ export default function Navbar() {
   console.log(pathName);
 
   return (
-    <nav className="h-20 flex border-b justify-between font-medium bg-white">
+    <nav className="h-20 flex border-b justify-between font-medium bg-white sticky top-0">
       <Link href={"/"} className="pl-6 flex items-center">
         <span className={cn("text-5xl font-semibold", poppings.className)}>
           Flipango
