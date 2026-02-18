@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "eslint",
     "generate:types": "bun --bun payload generate:types --disable-transpile",
-    "db:fresh": "payload migrate:fresh"
+    "db:fresh": "bun --bun payload migrate:fresh --disable-transpile",
+    "db:seed": "bun run src/seed.ts"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.2.2",
